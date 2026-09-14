@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Environment (contains real MySQL credentials — never commit)
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
