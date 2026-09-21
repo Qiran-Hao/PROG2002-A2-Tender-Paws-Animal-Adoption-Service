@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Tender Paws A2-2 — accent layer for the Adoption & Care theme
+   Loaded last on every page; only refines the shared tokens and components.
+   ========================================================================== */
+
+.site-header {
+  border-bottom: 2px solid var(--accent);
+}
+
+.brand {
+  color: var(--brand-dark);
+}
+
+/* Directory entry points pick up the warm accent on hover. */
+.directory-tile {
+  border-top-color: var(--accent);
+}
+
+.service-chip {
+  border-color: var(--accent);
+}
+
+.service-chip:hover {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+/* Service-type tags read as the secondary dimension next to the category. */
+.service-tag {
+  background: var(--tint);
+  color: var(--brand-dark);
+}
+
+.suits-panel {
+  border-left-color: var(--accent);
+}
+
+.suits-panel h2 {
+  color: var(--brand);
+}
+
+.contact-band .button,
+.event-cta .button {
+  border-radius: var(--radius-pill);
+}
