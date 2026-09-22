@@ -1,0 +1,267 @@
+/* ==========================================================================
+   Tender Paws A2-2 — home / directory styles
+   Service directory: category tiles, service chips, featured service cards
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Compact intro (deliberately not a rescue-story hero)
+   -------------------------------------------------------------------------- */
+.directory-intro {
+  padding: 48px 0 40px;
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+}
+
+.directory-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.directory-lead h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 12px 0 14px;
+}
+
+.directory-summary {
+  max-width: 56ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.directory-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 0;
+}
+
+.directory-figure {
+  margin: 0;
+}
+
+.directory-figure img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+}
+
+.directory-figure figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------------------------------------
+   Directory tiles (the four real categories)
+   -------------------------------------------------------------------------- */
+.directory-tiles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.directory-tile {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-width: 0;
+  height: 100%;
+  padding: 22px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--accent);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.directory-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.directory-tile-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.directory-tile-text {
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+/* --------------------------------------------------------------------------
+   Service-type chips (a separate dimension to the categories)
+   -------------------------------------------------------------------------- */
+.directory-types {
+  background: var(--surface-soft);
+  border-block: 1px solid var(--line);
+}
+
+.service-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.service-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-pill);
+  color: var(--brand);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.service-chip:hover {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   Featured service cards
+   -------------------------------------------------------------------------- */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+}
+
+.service-card-media-wrap {
+  background: var(--tint);
+}
+
+.service-card-media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.service-card-body {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  padding: 20px;
+  flex: 1;
+}
+
+.service-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+
+.service-card-title {
+  margin: 4px 0;
+  font-size: 1.25rem;
+}
+
+.service-card-facts {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 18px;
+}
+
+.service-card-facts .fact {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 10px;
+  align-items: baseline;
+}
+
+.service-card-facts dt {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.service-card-facts dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.service-card .button {
+  justify-self: start;
+  margin-top: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Contact band
+   -------------------------------------------------------------------------- */
+.contact-band {
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+}
+
+.contact-band-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.contact-band h2 {
+  margin: 6px 0;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .directory-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .directory-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .directory-tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-facts .fact {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
