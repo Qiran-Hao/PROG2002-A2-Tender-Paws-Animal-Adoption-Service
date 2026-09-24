@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search adoption &amp; care services | Tender Paws</title>
+    <meta
+      name="description"
+      content="Filter Tender Paws adoption and care services by service type, category, date and location.">
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <meta property="og:title" content="Search adoption &amp; care services | Tender Paws">
+    <meta
+      property="og:description"
+      content="Combine a service type with a category, date and location to find the right care service.">
+    <meta property="og:image" content="/assets/og.jpg">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/theme-b-adoption.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">
+            <img src="/assets/logo.svg" alt="" width="32" height="32">
+          </span>
+          Tender Paws
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Directory</a>
+          <a href="search.html" aria-current="page">Search services</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="search-banner" aria-labelledby="search-title">
+        <div class="container search-banner-inner">
+          <div>
+            <span class="eyebrow">Adoption &amp; care</span>
+            <h1 id="search-title">Search care services</h1>
+            <p>
+              Service type and category are two separate filters — combine them, then narrow by
+              keyword, date or location.
+            </p>
+          </div>
+          <img
+            src="/assets/AC-08.jpg"
+            alt="Foster families meeting in a park with their animals"
+            width="1600"
+            height="900">
+        </div>
+      </section>
+
+      <section class="search-section">
+        <div class="container search-layout">
+          <aside class="filter-rail" aria-labelledby="filter-title">
+            <h2 id="filter-title">Filters</h2>
+            <p class="filter-note">Every filter you set is added to the search.</p>
+            <form id="search-form" class="filter-form" role="search" aria-labelledby="filter-title">
+              <div class="filter-field">
+                <label for="serviceType">Service type</label>
+                <select id="serviceType" name="serviceType">
+                  <option value="">Any service type</option>
+                  <option value="rescue-support">Rescue support</option>
+                  <option value="foster-care">Foster care</option>
+                  <option value="adoption-guidance">Adoption guidance</option>
+                  <option value="shelter-shift">Shelter shift</option>
+                </select>
+              </div>
+              <div class="filter-field">
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                  <option value="">Any category</option>
+                  <option value="Rescue">Rescue</option>
+                  <option value="Adoption">Adoption</option>
+                  <option value="Shelter">Shelter</option>
+                  <option value="Volunteer">Volunteer</option>
+                </select>
+              </div>
+              <div class="filter-field">
+                <label for="keyword">Keyword</label>
+                <input
+                  id="keyword"
+                  name="keyword"
+                  type="search"
+                  placeholder="Orientation, clinic, workshop"
+                  autocomplete="off">
+              </div>
+              <div class="filter-field">
+                <label for="date">Date</label>
+                <input id="date" name="date" type="date">
+              </div>
+              <div class="filter-field">
+                <label for="location">Location</label>
+                <input
+                  id="location"
+                  name="location"
+                  type="search"
+                  placeholder="Shelter, park or clinic"
+                  autocomplete="off">
+              </div>
+              <div class="filter-actions">
+                <button class="button" type="submit">Search services</button>
+                <button class="button secondary" id="clear" type="reset">Clear filters</button>
+              </div>
+            </form>
+          </aside>
+
+          <div class="results-col">
+            <div class="results-header">
+              <h2 id="result-count" aria-live="polite">Loading services…</h2>
+              <a href="index.html">Back to the directory</a>
+            </div>
+            <div id="results" class="results-list" aria-live="polite">
+              <div class="state" role="status">
+                <p class="state-text">Loading services…</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <strong>Tender Paws</strong>
+        <p>Adoption &amp; care services run with local rescue teams, shelters and foster families.</p>
+        <p>
+          <a href="mailto:adoption@tenderpaws.example">adoption@tenderpaws.example</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>
