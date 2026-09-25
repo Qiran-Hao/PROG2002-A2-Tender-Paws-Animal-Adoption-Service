@@ -1,0 +1,309 @@
+/* ==========================================================================
+   Tender Paws A2-2 — event detail + registration placeholder styles
+   First screen foregrounds suitability, preparation, cadence and booking.
+   ========================================================================== */
+
+.event-section,
+.registration-section {
+  padding: 40px 0 72px;
+}
+
+/* --------------------------------------------------------------------------
+   Heading block
+   -------------------------------------------------------------------------- */
+.event-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+
+.event-head h1 {
+  margin: 12px 0 8px;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+}
+
+.event-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* --------------------------------------------------------------------------
+   First screen: suits grid (primary) + image/facts (secondary)
+   -------------------------------------------------------------------------- */
+.event-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 0.85fr);
+  gap: 26px;
+  align-items: start;
+  margin: 28px 0 36px;
+}
+
+.suits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.suits-panel {
+  min-width: 0;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.suits-panel h2 {
+  margin: 0 0 8px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.suits-panel p {
+  margin: 0;
+}
+
+.suits-panel .suits-foot {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.event-aside {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.event-media {
+  background: var(--tint);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.event-media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.event-facts {
+  margin: 0;
+  padding: 18px 20px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.event-facts h2 {
+  margin: 0 0 10px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.event-facts .fact,
+.prep-facts .fact {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 9px 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.event-facts .fact:last-child,
+.prep-facts .fact:last-child {
+  border-bottom: 0;
+}
+
+.event-facts dt,
+.prep-facts dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.event-facts dd,
+.prep-facts dd {
+  margin: 0;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   Body copy
+   -------------------------------------------------------------------------- */
+.event-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.event-body h2 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.event-body p {
+  margin: 0;
+  color: #5c4b42;
+}
+
+/* --------------------------------------------------------------------------
+   Call to action + gallery
+   -------------------------------------------------------------------------- */
+.event-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 22px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.event-cta .notice {
+  flex: 1 1 260px;
+  margin: 0;
+}
+
+.event-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.gallery-thumb {
+  background: var(--tint);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   Registration placeholder page
+   -------------------------------------------------------------------------- */
+.registration-head h1 {
+  margin: 10px 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+#registration-summary {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+#registration-summary h2 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+}
+
+.summary-service {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.prep-facts {
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.prep-cadence,
+.prep-readiness {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.prep-actions {
+  margin: 18px 0 0;
+}
+
+.prep-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.prep-card {
+  min-width: 0;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.prep-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+
+.prep-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.prep-card li {
+  margin-bottom: 6px;
+}
+
+.summary-media {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 18px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 920px) {
+  .event-lead {
+    grid-template-columns: 1fr;
+  }
+
+  .event-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .suits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 460px) {
+  .event-gallery {
+    grid-template-columns: 1fr;
+  }
+}
